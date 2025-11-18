@@ -10,8 +10,8 @@ def ComputerDecision():
 	else:
 		print("Error 1")
 
-	print("Computer choice no: "+ str(computerChoiceNo))
-	print("computer choice "+ str(computerChoice))
+	#print("Computer choice no: "+ str(computerChoiceNo))
+	#print("computer choice "+ str(computerChoice))
 	return computerChoice
 
 def WinConditions(computerChoice):
