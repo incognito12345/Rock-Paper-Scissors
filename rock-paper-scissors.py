@@ -15,7 +15,7 @@ def ComputerDecision():
 	return computerChoice
 
 def WinConditions(computerChoice):
-	print(computerChoice)
+	print("The computer chose: " + computerChoice)
 	if computerChoice == "rock" and playerChoice == "paper":
 		print("You win!")
 	elif computerChoice == "paper" and  playerChoice == "scissors":
@@ -29,8 +29,16 @@ def WinConditions(computerChoice):
 
 again = "y"
 while again == "y":
-	playerChoice = input("Rock, paper or scissors: ")
+	playerChoice = input("Rock, paper or scissors: ").lower()
+	if playerChoice == "quit":
+		break
 	computerChoiceNo = randint(1,3)
 	computerChoice = None
 	WinConditions(ComputerDecision())
-	again = input("Again? (y/n): ")
+
+	inputedCorrectly = False;
+	while inputedCorrectly == False:
+		again = input("Again? (y/n): ").lower()
+		if again == "y" or again == "n":
+			inputedCorrectly = True
+	print("\n")
